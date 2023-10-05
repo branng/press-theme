@@ -1,4 +1,5 @@
-<?php /* Template Name: DEV color
+<?php 
+/* Template Name: DEV color
 Template Post Type: cpt_dev
 */ get_header(); ?>
 <div class="content-section">
@@ -7,92 +8,135 @@ Template Post Type: cpt_dev
 			<?php echo breadcrumb(); ?>
 		</div>
 	</div>
-
-
-
-
-
-
-	<div class="container">
-		<div class="content-section">
 	<?php 
-	$args = array(
-		"home" => array(
-			"page-title" => "Home",
-			"page-content" => 'Esta es la página de inicio',
-			"page-template" => 'template-home.php',
-			'post_type' => 'page',
-		),
-		"buttons" => array(
-			"page-title" => "Template Buttons",
-			"page-content" => 'Template Buttons',
-			"page-template" => 'template-pruebas-buttons.php',
-			'post_type' => 'cpt_dev',
+	// Referencia de array multidimensional
+	// https'=>'//www.guidacode.com/2017/php/arrays-php-array-multidimensional/
+	$colores = array(	
+		'Background Colors' => array(
+			"u-bg-color-superficie-brand",
+			"u-bg-color-superficie-brand-black",
+			"u-bg-color-superficie-principal",
+			"u-bg-color-superficie-principal-light",
+			"u-bg-color-superficie-secondary",
+			"u-bg-color-superficie-secondary-dark",
+			"u-bg-color-superficie-secondary-light"
 		)
+
 	);
-
-	$pages_to_create = $args;
-
-	foreach($pages_to_create as $page => $pageType){
-		echo $pageType["page-title"];
-		echo $pageType["page-content"];
-		echo $pageType["page-template"];
-		echo $pageType["post_type"];
-	}
-
-
 	?>
+	<?php foreach($colores as $tipo => $colores){ ?>
+	<div class="div total u-pTB-l">
+		<div class="container">
+			<div class="l-loopColors a-marginBottom-100">
+				<div class="head">
+					<h2><?php echo $tipo; ?></h2>
+				</div>
+				<div class="loop">
+					<?php foreach( $colores as $valorColor){ ?>
+						<div class="m-cardColor">
+							<div class="m-cardColor__bxColor <?php echo $valorColor; ?>"></div>
+							<div class="m-cardColor__bxTxt">
+								<p class="ht-body-xs">
+									<strong></strong> <span>.<?php echo $valorColor; ?></span>
+								</p>				
+							</div>
+						</div>
+					<?php } ?>
+					
+				</div>
 			</div>
+		</div>
 	</div>
+	<?php } ?>
+
+
 
 
 	<?php 
 	// Referencia de array multidimensional
 	// https'=>'//www.guidacode.com/2017/php/arrays-php-array-multidimensional/
-	$colores = array(	
-		'Colores Coporativos' => array(
-			"u-bg-black" => 		'$black',
-			"u-bg-black-100" => 	'$black-100',
-			"u-bg-violet" =>		'$violet',
-			"u-bg-gray" =>			'$gray',
-			"u-bg-gray-100" => 		'$gray-100',
-			"u-bg-gray-white" =>	'$gray-white',
-			"u-bg-blue" => 			'$blue',
-			"u-bg-blue-100" => 		'$blue-100',
-			"u-bg-blue-200" => 		'$blue-200',
-			"u-bg-green" => 		'$green',
-			"u-bg-green-100" => 	'$green-100',
-			"u-bg-green-200" => 	'$green-200',
-			"u-bg-white" => 		'$white'
+	$coloresType = array(	
+		'Type Colors' => array(
+			"u-type-color-base-text-principal",
+			"u-type-color-base-text-secondary",
+			"u-type-color-base-text-terciary",
+			"u-type-color-base-text-white"
 		)
 	);
 	?>
-
-	<div class="container">
-		<div class="l-loopColors a-marginBottom-100">
-			<div class="head">
-				<h5><?php echo $tipo; ?></h5>
-			</div>
-			<div class="loop">
-				<?php foreach($colores as $tipo => $colores){ ?>
-				
-				<?php foreach( $colores as $nombreColor => $valorColor){ ?>
-					<div class="m-cardColor">
-						<div class="m-cardColor__bxColor <?php echo $nombreColor; ?>"></div>
-						<div class="m-cardColor__bxTxt">
-							<p>
-								<strong></strong> <span>.<?php echo $nombreColor; ?></span>
-								<br>
-								<strong></strong> <span><?php echo $valorColor; ?></span>
-							</p>				
+	<?php foreach($coloresType as $tipo => $valorColorType){ ?>
+	<div class="div total u-pTB-l">
+		<div class="container">
+			<div class="l-loopColors a-marginBottom-100">
+				<div class="head">
+					<h2><?php echo $tipo; ?></h2>
+				</div>
+				<div class="loop">
+					<?php foreach( $valorColorType as $valorColor){ 
+						
+						if(strpos($valorColor, 'white') !== false){
+							echo '<div class="m-cardType u-p-m text-center u-nmB-lastchild" style="background-color: black;">';
+						} else {
+							echo '<div class="m-cardType u-p-m text-center u-nmB-lastchild" style="background-color: #f0f0f0;">';
+						}
+						?>
+							<p class="ht-one u-mB-0 <?php echo $valorColor; ?>">Abcdef</p>		
+							<p class="<?php echo $valorColor; ?>"><small>.<?php echo $valorColor; ?></small></p>
 						</div>
-					</div>
-				<?php } ?>
-				<?php } ?>
+						
+					<?php } ?>
+					
+				</div>
 			</div>
 		</div>
 	</div>
-	
+	<?php } ?>
+
+
+
+
+	<?php 
+	// Referencia de array multidimensional
+	// https'=>'//www.guidacode.com/2017/php/arrays-php-array-multidimensional/
+
+
+	$coloresType = array(	
+		'Buttons Colors' => array(
+			'var(--souds-button-color-white)',
+			'var(--souds-button-color-principal-500)',
+			'var(--souds-button-color-principal-700)',
+			'var(--souds-button-color-principal-300)',
+			'var(--souds-button-color-principal-100)',
+			'var(--souds-button-color-secondary-500)',
+			'var(--souds-button-color-secondary-700)',
+			'var(--souds-button-color-secondary-300)',
+			'var(--souds-button-color-secondary-100)'
+		)
+	);
+	?>
+	<?php foreach($coloresType as $tipoButton => $valorColorButtonType){ ?>
+	<div class="div total u-pTB-l">
+		<div class="container">
+			<div class="l-loopColors a-marginBottom-100">
+				<div class="head">
+					<h2><?php echo $tipoButton; ?></h2>
+				</div>
+				<div class="loop">
+					<?php foreach( $valorColorButtonType as $valorColorButton){ ?>
+						<div class="m-cardColor">
+							<div class="m-cardColor__bxColor" style="background-color: <?php echo $valorColorButton; ?>;"></div>
+							<div class="m-cardColor__bxTxt">
+								<p class="ht-body-xs">
+									<strong></strong> <span><?php echo $valorColorButton; ?></span>
+								</p>				
+							</div>
+						</div>
+					<?php } ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php } ?>
 </div>
 	
 	

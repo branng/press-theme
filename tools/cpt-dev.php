@@ -54,8 +54,7 @@ function post_cpt_dev() {
 }
 
 $admins = array( 
-    'webmaster.branng', 
-    'laura.branng'
+    'webmaster.branng'
 );
 
 // get the current user
