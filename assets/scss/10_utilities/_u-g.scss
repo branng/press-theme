@@ -1,0 +1,49 @@
+$varSizeFormat : 1px;
+
+
+  /* Is equivalent to:
+  *	 gap: 10px 15%;
+  *  row-gap: 10px;
+  *  column-gap: 15%;
+  */
+
+@each $varSizeName, $varSizeValue in $map-sizes-desk {
+	.u-g-#{$varSizeName}{
+		gap: ($varSizeValue * $varSizeFormat) ($varSizeValue * $varSizeFormat);
+	}
+	.u-gY-#{$varSizeName}{
+		gap: 0 $varSizeValue * $varSizeFormat;
+	}
+	.u-gX-#{$varSizeName}{
+		gap: $varSizeValue * $varSizeFormat 0;
+	}
+}
+
+@include breakpoint-md(){
+	@each $varSizeName, $varSizeValue in $map-sizes-mob {
+		.u-md-g-#{$varSizeName}{
+			gap: ($varSizeValue * $varSizeFormat) ($varSizeValue * $varSizeFormat);
+		}
+		.u-md-gY-#{$varSizeName}{
+			gap: 0 $varSizeValue * $varSizeFormat;
+		}
+		.u-md-gX-#{$varSizeName}{
+			gap: $varSizeValue * $varSizeFormat 0;
+		}
+	}	
+}
+
+
+@include breakpoint-sm(){
+	@each $varSizeName, $varSizeValue in $map-sizes-mob {
+		.u-sm-g-#{$varSizeName}{
+			gap: ($varSizeValue * $varSizeFormat) ($varSizeValue * $varSizeFormat);
+		}
+		.u-sm-gY-#{$varSizeName}{
+			gap: 0 $varSizeValue * $varSizeFormat;
+		}
+		.u-sm-gX-#{$varSizeName}{
+			gap: $varSizeValue * $varSizeFormat 0;
+		}
+	}	
+}

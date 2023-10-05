@@ -1,0 +1,52 @@
+$varSizeFormat: 1px;
+
+@mixin generateMarginClasses($prefix: "", $sizeMap: $map-sizes-desk) {
+    @each $varSizeName, $varSizeValue in $sizeMap {
+        .u-#{$prefix}m-#{$varSizeName} {
+            margin: ($varSizeValue * $varSizeFormat) ($varSizeValue * $varSizeFormat);
+        }
+		.u-#{$prefix}mT-#{$varSizeName} {
+            margin-top: $varSizeValue * $varSizeFormat;
+        }
+        .u-#{$prefix}mB-#{$varSizeName} {
+            margin-bottom: $varSizeValue * $varSizeFormat;
+        }
+		.u-#{$prefix}mTB-#{$varSizeName} {
+            margin-bottom: $varSizeValue * $varSizeFormat;
+            margin-top: $varSizeValue * $varSizeFormat;
+        }
+        .u-#{$prefix}mL-#{$varSizeName} {
+            margin-left: $varSizeValue * $varSizeFormat;
+        }
+        .u-#{$prefix}mR-#{$varSizeName} {
+            margin-right: $varSizeValue * $varSizeFormat;
+        }
+        .u-#{$prefix}mLR-#{$varSizeName} {
+            margin-right: $varSizeValue * $varSizeFormat;
+            margin-left: $varSizeValue * $varSizeFormat;
+        }
+
+    }
+}
+
+
+// Generación para el tamaño de escritorio por defecto
+@include generateMarginClasses();
+@include media-breakpoint-down(lg) {
+    @include generateMarginClasses( '', $map-sizes-mob);
+}
+
+@include media-breakpoint-down(lg) {
+	// @include generateMarginClasses("", $map-sizes-desk);
+    @include generateMarginClasses("lg-", $map-sizes-mob);
+}
+
+@include media-breakpoint-down(md) {
+	// @include generateMarginClasses("", $map-sizes-desk);
+    @include generateMarginClasses("md-", $map-sizes-mob);
+}
+
+@include media-breakpoint-down(sm) {
+	// @include generateMarginClasses("", $map-sizes-desk);
+    @include generateMarginClasses("sm-", $map-sizes-mob);
+}

@@ -1,0 +1,6 @@
+/* functions */
+@function pxls($pixels){
+	$resultado:();
+	$resultado:( $pixels / 16 ) * $font-size;
+	@return $resultado;
+}

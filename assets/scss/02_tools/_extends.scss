@@ -1,0 +1,23 @@
+/* extends */
+%reset-list{
+	list-style-type: 	none;
+	padding-left: 		0px;
+	margin-bottom: 		0px;
+}
+
+%btn-reset,
+%reset-buttons{
+	background-color: transparent;
+	border: 0;
+	color: inherit;
+	padding: 0;
+	&:hover,
+	&:active,
+	&:focus{
+		background-color: transparent;
+		border: 0;
+		padding: 0;
+		color: inherit;
+		box-shadow: 0;
+	}
+}

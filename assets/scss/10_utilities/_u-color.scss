@@ -1,0 +1,5 @@
+@each $name, $varColor in $type-colors {
+	.u-type-#{$name}{
+		color: $varColor;
+	}
+}

@@ -1,0 +1,20 @@
+.a-btnBrgr{
+    @extend %reset-buttons;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width:  40px;
+    height: 40px;
+    margin: 0;
+    svg{
+        width: 37px;
+        height: auto;
+        display: block;
+        path{
+            fill: currentColor;
+        }
+    }
+    @include media-breakpoint-down(lg) {
+		display: flex;
+	}
+}

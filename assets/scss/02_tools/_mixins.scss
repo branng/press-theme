@@ -1,0 +1,9 @@
+/* Mixins
+  =============== */
+@mixin grid($repeatGrid: 12, $gapGrid: 2rem){ 
+    display: grid;
+    grid-template-columns: repeat($repeatGrid, 1fr);
+    gap: $gapGrid;
+    grid-gap: $gapGrid;
+}
+ 

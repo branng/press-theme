@@ -1,0 +1,246 @@
+/* Variables
+ * ===============
+ *
+ * Todas las variables de configuración están definidas en esta página
+ */
+ 
+/* Containers */
+$xxs-small: 400px;
+$xs-small: 600px;
+$small: 800px;
+$medium: 1000px;
+$large: 1200px;
+
+
+/* Breakpoints */
+
+/*
+$mobile: $xs-small;
+$tablet: $small;
+$desktop: $medium;
+*/
+
+/* Breakpoints */
+
+$breakpoint-xs: 	576px;
+$breakpoint-sm: 	768px;
+$breakpoint-md: 	992px;
+$breakpoint-lg: 	1200px;
+$breakpoint-xl: 	1400px;
+$breakpoint-xxl: 	1660px;
+
+
+/* Colors */
+$press-color-base-black : 					var(--press-color-base-black);
+$press-color-base-white : 					var(--press-color-base-white);
+$press-color-base-text-principal : 			var(--press-color-base-text-principal);	
+$press-color-base-text-secondary :			var(--press-color-base-text-secondary);		
+$press-color-base-text-terciary	: 			var(--press-color-base-text-terciary);	
+$press-color-base-text-white : 				var(--press-color-base-text-white);
+$press-color-superficie-brand : 			var(--press-color-superficie-brand);	
+$press-color-superficie-brand-black : 		var(--press-color-superficie-brand-black);	
+$press-color-superficie-principal: 			var(--press-color-superficie-principal);
+$press-color-superficie-principal-dark	: 	var(--press-color-superficie-principal-dark);			
+$press-color-superficie-principal-light : 	var(--press-color-superficie-principal-light);
+$press-color-superficie-secondary : 		var(--press-color-superficie-secondary);
+$press-color-superficie-secondary-dark : 	var(--press-color-superficie-secondary-dark);
+$press-color-superficie-secondary-light : 	var(--press-color-superficie-secondary-light);
+
+
+$press-button-color-transparent : 	var(--press-button-color-transparent);
+$press-button-color-white : 		var(--press-button-color-white);
+$press-button-color-principal-500 : var(--press-button-color-principal-500);
+$press-button-color-principal-700 : var(--press-button-color-principal-700);
+$press-button-color-principal-300 : var(--press-button-color-principal-300);
+$press-button-color-principal-100 : var(--press-button-color-principal-100);
+$press-button-color-secondary-500 : var(--press-button-color-secondary-500);
+$press-button-color-secondary-700 : var(--press-button-color-secondary-700);
+$press-button-color-secondary-300 : var(--press-button-color-secondary-300);
+$press-button-color-secondary-100 : var(--press-button-color-secondary-100);
+
+
+$type-colors: (
+	'color-base-text-principal' : $press-color-base-text-principal,
+	'color-base-text-secondary' : $press-color-base-text-secondary,		
+	'color-base-text-terciary' 	: $press-color-base-text-terciary,	
+	'color-base-text-white' 	: $press-color-base-text-white,
+	'color-base-tag' 			: $press-button-color-principal-500
+);
+
+$bg-colors: (
+	'color-superficie-brand' 				: $press-color-superficie-brand,	
+	'color-superficie-brand-black' 			: $press-color-superficie-brand-black,	
+	'color-superficie-principal'			: $press-color-superficie-principal,
+	'color-superficie-principal-dark'		: $press-color-superficie-principal-dark,			
+	'color-superficie-principal-light' 		: $press-color-superficie-principal-light,
+	'color-superficie-secondary' 			: $press-color-superficie-secondary,
+	'color-superficie-secondary-dark' 		: $press-color-superficie-secondary-dark,
+	'color-superficie-secondary-light' 		: $press-color-superficie-secondary-light,
+	'color-superficie-white'				: $press-color-base-white
+);
+
+
+/* forms cf7 */
+$b-Success: #00A04A;
+$b-Warning: #FDDC0D;
+$b-Error: #E01F3D;
+$b-Inform: #204496;
+
+
+$background: $press-color-base-white; 
+$primary-color: $press-color-superficie-brand;
+$secondary-color: $press-color-superficie-secondary; 
+$accent-color: $press-color-superficie-brand;
+$alternate-background: $press-color-superficie-principal;
+$alternate-color: $press-color-superficie-secondary;
+$link-color: $press-color-base-text-terciary;
+$link-hover-color: $press-color-base-text-terciary;
+$highlight: #ffeea8;
+$error: $b-Error;
+$bq-border: 16px solid $accent-color;
+
+/* forms cf7 */
+$b-Success: #00A04A;
+$b-Warning: #FDDC0D;
+$b-Error: #E01F3D;
+$b-Inform: #204496;
+
+
+
+/* Typography */
+
+// Body font
+$import_family: !default;
+$font-size: 1rem;
+$body-font-size: 1rem;
+$font-style: normal;
+$font-variant: normal;
+$font-weight: normal;
+$font-color: $press-color-base-text-principal;
+$font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+$line-height: 1.6;
+
+// Headings
+$heading-font-color: $font-color;
+$heading-font-weight: 600;
+$heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+$heading-line-height: 1.2;
+
+// Mobile heading font size
+$h1-mobile: 1.75rem;
+$h2-mobile: 1.5rem;
+$h3-mobile: 1.25rem;
+$h4-mobile: 1.1rem;
+$h5-mobile: 1rem;
+
+// Heading font size
+$h1: 2.25rem;
+$h2: 2rem;
+$h3: 1.75rem;
+$h4: 1.5rem;
+$h5: 1.25rem;
+
+/* Padding */
+
+$padding: 1rem;
+$margins: 1.5rem;
+$content-padding: 60px 0;
+$content-padding-mobile: 30px 0;
+
+/* Borders */
+
+$border-width: 1px;
+$border-style: solid;
+$border-color: #dedede;
+$border-radius: 4px;
+$borders: $border-width $border-style $border-color;
+
+/* Buttons */
+$button-background: $primary-color;
+$button-background-hover: $button-background, 10%;
+$button-color: #ffffff;
+$button-font-weight: 600;
+$button-font-family: $font-family;
+$button-font-size: 1rem;
+$button-border-width: 1px;
+$button-border-style: solid;
+$button-border-color: $button-background;
+$button-border-radius: $border-radius;
+$button-text-transform: none;
+
+// Accent buttons
+$accent-button-background: $secondary-color;
+$accent-button-color: #ffffff;
+$accent-button-color-hover: #ffffff;
+ 
+// Muted Buttons
+$muted-border: 1px solid $accent-color;
+$muted-border-hover: 1px solid $accent-color, 30%;
+$muted-background: transparent;
+$muted-background-hover: transparent;
+$muted-color: $accent-color;
+$muted-color-hover: $accent-color;
+
+// Round Buttons   
+$round-buttons: 40px; 
+
+// Round Buttons   
+$round-buttons: 40px; 
+
+/* Forms */
+$forms: ('[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
+$buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button]');
+$input-background: $press-color-base-white;
+$placeholder: $press-color-base-text-secondary;
+$form-border: 0px;
+$form-border-hover: 0px;
+$form-border-focus: 0px; 
+
+
+/* Tables */
+
+$stripes: #f8f8f8;
+$caption: #ababab;
+
+/* Code */
+
+$code-color: $font-color;
+$code-size: 14px;
+$code-family: Menlo, monospace;
+$code-background: transparent;
+$code-borders: $borders;   
+
+
+$map-sizes-desk: (
+	'xxl': 280,
+	'xl': 160,
+	'l': 80,
+	'm': 40,
+	's': 24,
+	'xs': 16,
+	'xxs': 8,
+	'0': 0
+);
+
+$map-sizes-mob: (
+	'xxl': 160,
+	'xl': 80,
+	'l': 60
+);
+
+
+
+
+// CUSTOM SCROLLBAR VARS
+// SIZE 
+// rp-custom-scrollbar => in _mixins.scss
+$scrollbar__size : 8px;
+$scrollbar-button__size : 1px;
+// RAIL
+$scrollbar-track__bg : transparent;
+$scrollbar-track__border : 1px solid transparent;
+$scrollbar-track__border-radius : 10px;
+// BUTTON
+$scrollbar-thumb__bg : #707070;
+$scrollbar-thumb__border : 1px solid #FEFEFE;
+$scrollbar-thumb__border-radius : 10px;

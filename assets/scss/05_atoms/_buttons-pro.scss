@@ -1,0 +1,176 @@
+/* Buttons */
+*:focus {outline:0;}
+.a-btn{
+	@extend %reset-buttons;
+	@include ht-body();	
+	display: inline-flex;
+	//margin: 0 0.5em 0.5em 0;
+	width: fit-content;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	text-decoration: none;
+	font-family: $button-font-family;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+	padding: 12px 20px;
+	column-gap: 16px;
+	border: 1px solid transparent;
+	position: 	relative;
+	transition: 
+		color ease .3s,
+		border ease .3s,
+		background-color ease .3s
+	;
+	font-weight: 500;
+	>.__icon{
+		width: 22px;
+		height: 22px;
+		display: block;
+		pointer-events: none;
+	}
+
+	>span{
+		display: block;
+		pointer-events: none;
+		&:first-child{
+			
+			padding-left: 4px;
+		}
+		&:last-child{
+			padding-right: 4px;
+		}
+	}
+
+	&[class*="ghost"]{
+		border: 0!important;
+	}
+
+
+	@include media-breakpoint-down(md){
+		@include ht-body-s();	
+		padding: 10px 16px;
+		>.__icon{
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&.--btn-min{
+		@include ht-body-s();	
+		padding: 10px 16px;
+		>.__icon{
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+
+	&.--btn-total{
+		width: 100%;
+		text-align: center;
+		justify-content: center;
+		&:has(svg){
+			justify-content: space-between;
+		}
+
+	}
+
+	&:hover {
+		// color: $body-color;
+		text-decoration: none;
+	}
+
+	&:focus {
+		//outline: 0;
+		//box-shadow: $btn-focus-box-shadow;
+	}
+	
+
+	&:active,
+	&.is-active {
+		//@include box-shadow($btn-active-box-shadow);
+		&:focus {
+			//@include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+		}
+	}
+	
+	&:disabled,
+	&.disabled{
+		pointer-events: none;
+		//opacity: $btn-disabled-opacity;
+		//@include box-shadow(none);
+	}
+}
+
+
+
+/* BTN SOLID MIXIN */
+@mixin btn( $c, $c-bg, $c-brdr, $c-hover, $c-hover-bg, $c-hover-brdr, $c-dis, $c-dis-bg, $c-dis-brdr ){
+	color: 					$c;
+	background-color:		$c-bg;
+	border-color: 			$c-brdr;
+	&:hover,
+	&:active,
+	&:focus{
+		color: 					$c-hover;
+		background-color:		$c-hover-bg;
+		border: 				1px solid $c-hover-brdr;
+	}
+	&.disabled,
+	&.is-active{
+		color: 					$c-dis;
+		background-color:		$c-dis-bg;
+		border: 				1px solid $c-dis-brdr;
+	}
+	// &.is-active{
+	// 	color: 					$c-dis;
+	// 	background-color:		$c-dis-bg;
+	// 	border: 				1px solid $c-dis-brdr;
+	// }
+
+}
+
+// Botones por defecto :) 
+// 	#{$buttons} {
+// 		@include btn-solid( $brand-color-white, $brand-color-two, $brand-color-two, $brand-color-two, transparent, $brand-color-two ); 
+// 	}
+
+
+$ct :     $press-button-color-transparent;
+$cw :     $press-button-color-white;			
+$cp500 :  $press-button-color-principal-500;
+$cp700 :  $press-button-color-principal-700;
+$cp300 :  $press-button-color-principal-300;
+$cp100 :  $press-button-color-principal-100;	
+$cs500 :  $press-button-color-secondary-500;	
+$cs700 :  $press-button-color-secondary-700; 	
+$cs300 :  $press-button-color-secondary-300; 	
+$cs100 :  $press-button-color-secondary-100; 	
+
+/*
+Name color BG-Color COLOR-BORDER COLOR-HOVER COLOR-HOVER-BG COLOR-BODER-HOVER
+name color, $c, $c-bg, $c-brdr, $c-hover, $c-hover-bg, $c-hover-brdr, $c-dis, $c-dis-bg, $c-dis-brdr 
+*/
+$buttonsSolid: 
+	"primary" $cw $cp500 $cp500 $cw $cp700 $cp700 $cw $cp300 $cp100,
+	"secondary" $cw $cs500 $cs500 $cw $cs700 $cs700 $cw $cs300 $cs300,
+	"white" $cp500 $cw $cw $cp500 $cs300 $cs300 $cp300 $cw $cw,
+	"ghost" $cp500 $ct $ct $cp500 $cp300 $cp300 $cp300 $ct $ct,
+	"selector" $cs500 $cs100 $cs100 $cs500 $cs100 $cs500 $cs300 $cs100 $cs100,
+	"contact" $cs500 $cw $cw $cw $cs500 $cs500 $cw $cs500 $cs500,
+;
+
+@each $e-name, $e-c, $e-c-bg, $e-c-brdr, $e-c-hover, $e-c-hover-bg, $e-c-hover-brdr, $e-c-dis, $e-c-dis-bg, $e-c-dis-brdr in $buttonsSolid{
+	/* btn-#{$e-name} Styles */
+	/* buttons solid */	
+	.a-btn-#{$e-name}{
+		@include btn( #{$e-c}, #{$e-c-bg}, #{$e-c-brdr}, #{$e-c-hover}, #{$e-c-hover-bg}, #{$e-c-hover-brdr}, #{$e-c-dis}, #{$e-c-dis-bg}, #{$e-c-dis-brdr} ); 
+	}
+}
+
+
+.btn-reset{
+	@extend %btn-reset !optional;
+}

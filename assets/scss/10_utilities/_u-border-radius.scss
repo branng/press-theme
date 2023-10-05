@@ -1,0 +1,18 @@
+@mixin generate-border-radius($map, $prefix: '') {
+	@each $varSizeName, $varSizeValue in $map {
+		.#{$prefix}u-br-#{$varSizeName} {
+			border-radius: ($varSizeValue * $varSizeFormat) ($varSizeValue * $varSizeFormat);
+		}
+	}
+}
+
+$varSizeFormat: 1px;
+
+@include generate-border-radius($map-sizes-desk);
+@include media-breakpoint-down(md){
+	@include generate-border-radius($map-sizes-mob, 'u-md-');
+}
+
+@include media-breakpoint-down(md){
+	@include generate-border-radius($map-sizes-mob, 'u-sm-');
+}

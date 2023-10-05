@@ -1,0 +1,13 @@
+.a-xClose{
+    @extend %reset-buttons;
+    width: 20px;
+    height: 20px;
+    svg{
+        width: 100%;
+        height: auto;
+        display: block;
+        path{
+            fill: currentColor;
+        }
+    }
+}

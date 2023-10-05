@@ -1,0 +1,26 @@
+* {
+    scroll-margin-top: 100px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    @include rp-custom-scrollbar(
+        $scrollbar__size,
+        $scrollbar-button__size,
+        $scrollbar-track__bg,
+        $scrollbar-track__border,
+        $scrollbar-track__border-radius,
+        $scrollbar-thumb__bg,
+        $scrollbar-thumb__border,
+        $scrollbar-thumb__border-radius
+    );
+}
+
+::selection {
+    color: white;
+    background-color: black;
+}
+

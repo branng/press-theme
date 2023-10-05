@@ -1,0 +1,12 @@
+/* a-weight */
+$a-weight: (
+	"extraBold": 			$extraBold, 
+	"semiBold": 			$semiBold, 
+	"regular": 				$regular, 
+);
+
+@each $name, $varWeight in $a-weight {
+	.u-#{$name}{
+		font-weight: $varWeight;
+	}
+}

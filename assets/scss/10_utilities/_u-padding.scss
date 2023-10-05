@@ -1,0 +1,55 @@
+$varSizeFormat: 1px;
+
+@mixin generatePaddingClasses($prefix: "", $sizeMap: $map-sizes-desk) {
+    @each $varSizeName, $varSizeValue in $sizeMap {
+        .u-#{$prefix}p-#{$varSizeName} {
+            padding: ($varSizeValue * $varSizeFormat) ($varSizeValue * $varSizeFormat);
+        }
+		.u-#{$prefix}pT-#{$varSizeName} {
+            padding-top: $varSizeValue * $varSizeFormat;
+        }
+		.u-#{$prefix}pB-#{$varSizeName} {
+            padding-bottom: $varSizeValue * $varSizeFormat;
+        }
+		.u-#{$prefix}pTB-#{$varSizeName} {
+            padding-top: $varSizeValue * $varSizeFormat;
+            padding-bottom: $varSizeValue * $varSizeFormat;
+        }
+        .u-#{$prefix}pL-#{$varSizeName} {
+            padding-left: $varSizeValue * $varSizeFormat;
+        }
+        .u-#{$prefix}pR-#{$varSizeName} {
+            padding-right: $varSizeValue * $varSizeFormat;
+        }
+		.u-#{$prefix}pLR-#{$varSizeName} {
+            padding-right: $varSizeValue * $varSizeFormat;
+            padding-left: $varSizeValue * $varSizeFormat;
+        }
+    }
+}
+
+
+// Generación para el tamaño de escritorio por defecto
+@include generatePaddingClasses();
+@include media-breakpoint-down(lg) {
+    @include generatePaddingClasses( '', $map-sizes-mob);
+}
+
+@include media-breakpoint-down(lg) {
+	// @include generatePaddingClasses(); // Sin prefijo para mobile
+    @include generatePaddingClasses("lg-", $map-sizes-mob);
+}
+
+// Puntos de interrupción
+@include media-breakpoint-down(md) {
+    // @include generatePaddingClasses(); // Sin prefijo para mobile
+	@include generatePaddingClasses("md-", $map-sizes-mob);
+}
+
+@include media-breakpoint-down(sm) {
+    // @include generatePaddingClasses();
+	@include generatePaddingClasses("sm-", $map-sizes-mob);
+}
+
+
+

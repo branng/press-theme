@@ -1,0 +1,39 @@
+
+$sizePadding : 0.5rem;
+$sizePaddingDobble : $sizePadding * 2;
+.m-slideDemo{
+
+	.__loop{
+		.slick-list{
+			overflow: visible!important;
+			width: calc(100% + #{$sizePadding} * 2);
+			margin-left: -$sizePadding;
+		}
+	}
+
+	.__item{
+		padding: 0 $sizePadding;
+		opacity: 0.4;
+		transition: opacity ease .3s;
+		@include media-breakpoint-down(md){
+			padding: 0 0.5rem;
+		}
+		&.slick-active,
+		&.slick-current{
+			opacity: 1;
+		}
+	}
+
+	.__footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        margin-top: -50px;
+		@include media-breakpoint-down(lg){
+            display: none;
+        }
+    }
+
+}
+

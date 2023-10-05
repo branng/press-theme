@@ -1,0 +1,19 @@
+.a-arrowCircle{
+    display: block;
+    pointer-events: all;
+    cursor: pointer;
+    width: fit-content;
+    transition: 
+        transform ease .1s,
+        opacity ease .3s;
+    svg{
+        display: block;
+        pointer-events: none;
+        path{
+            fill: currentColor;
+        }
+    }
+    &:hover{
+        transform: scale(1.1) rotate(0 ); 
+    }
+}

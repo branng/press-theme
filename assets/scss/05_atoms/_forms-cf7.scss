@@ -1,0 +1,175 @@
+/*
+Remove this area if you are including variables.less from bootstrap or if you are including this less file inside a bigger one that contains variables.less already.*/
+
+$text-color: 					$primary-color;
+
+$alert-padding: 				1rem;
+$alert-border-radius: 			(6/16) * 1rem;
+
+$line-height-computed: 			20px;
+
+$padding-base-vertical:			6px;
+$padding-base-horizontal:		12px;
+
+$brand-danger:					$b-Error;
+
+$state-success-text:			$b-Success;
+$state-success-bg:				#dff0d8;
+$state-success-border:			$state-success-bg;
+
+$state-info-text:				#31708f;
+$state-info-bg:					#d9edf7;
+$state-info-border:				$state-info-bg;
+
+$state-warning-text:			$b-Warning;
+$state-warning-bg:				$b-Warning;
+$state-warning-border:			$state-warning-bg;
+
+$state-danger-text:				$b-Error;
+$state-danger-bg:				$b-Error;
+$state-danger-border:			$b-Error;
+
+$alert-success-bg:				$state-success-bg;
+$alert-success-text:			$state-success-text;
+$alert-success-border:			$state-success-border;
+								
+$alert-info-bg:					$state-info-bg;
+$alert-info-text:				$state-info-text;
+$alert-info-border:				$state-info-border;
+								
+$alert-warning-bg:				$state-warning-bg;
+$alert-warning-text:			$state-warning-text;
+$alert-warning-border:			$state-warning-border;
+								
+$alert-danger-bg:				$state-danger-bg;
+$alert-danger-text:				$state-danger-text;
+$alert-danger-border:			$state-danger-border;
+
+@mixin box-shadow($shadow){
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+		  box-shadow: $shadow;
+}
+
+.help-block {
+	display: block; // account for any element using help-block
+	margin-top: 2px;
+	margin-bottom: 10px;
+	color: $text-color; // lighten the text some for contrast
+}
+
+
+div.wpcf7{
+	div.wpcf7-response-output{
+		//padding: $alert-padding;			
+		margin-bottom: $line-height-computed;
+		//border-radius: $alert-border-radius;
+		//border-width: 1px;					
+		//border-style: solid;
+		color: $b-Error;
+		//@extend .ht-body;	
+
+		&.wpcf7-mail-sent-ok{
+		 	color: $alert-success-text;
+			border-color: $alert-success-border;
+			background-color: $alert-success-bg;
+		}
+
+		&.wpcf7-mail-sent-ng{
+			color: $alert-danger-text;
+			border-color: $alert-danger-border;
+			background-color: $alert-danger-bg;
+		}
+
+		&.wpcf7-spam-blocked{
+			color: $alert-danger-text;
+			border-color: $alert-danger-border;
+			background-color: $alert-danger-bg;
+		}
+
+		&.wpcf7-validation-errors{
+			color: $alert-warning-text;
+			border-color: $alert-warning-border;
+			background-color: $alert-warning-bg;
+		 }
+	}
+
+	.screen-reader-response{
+		position: absolute;
+		overflow: hidden;
+		clip: rect(1px, 1px, 1px, 1px);
+		width: 1px;
+		height: 1px;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+
+	span.wpcf7-form-control-wrap{
+		position: relative;
+	}
+
+	input.wpcf7-not-valid{
+		border-color: $brand-danger;
+		margin-bottom: 0rem;
+	}
+	
+	span.wpcf7-not-valid-tip{
+		@extend .help-block;
+		color: $brand-danger;
+	}
+
+	span.wpcf7-list-item{
+		/*margin-left: @include 5em;*/
+	}
+
+	.wpcf7-display-none{
+		display: none;
+	}
+
+	img.ajax-loader{
+		margin-left: 4px;
+		vertical-align: middle;
+		border: none;
+	}
+
+	div.ajax-error{
+		display: none;
+	}
+	
+	
+	textarea.a-textHeight{
+		height: pxls(600);
+		
+		@include media-breakpoint-down(md){
+			height: auto;
+		}
+	}
+
+
+
+	// terms y conditions
+	&__terms,
+	&__submit{
+		margin-bottom: 1rem;
+	}
+
+	&__terms{
+
+	}
+
+	&__submit{
+		>*{
+			margin-left: 0;
+		}
+	}
+
+
+
+	
+}
+
+
+
+
+
+

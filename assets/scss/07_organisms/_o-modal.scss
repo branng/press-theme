@@ -1,0 +1,187 @@
+// .o-modal
+.o-modal{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: none;
+	overflow: auto;
+	background-color: #000;
+	z-index: 9999;
+	
+	&.js-open{
+		display: block;
+	}
+	
+	&__modal-window {
+		width: 98%;
+		max-width: 880px;
+		min-height: calc(100% - (1.75rem * 3));
+		margin: 1.75rem auto;
+		display: flex;
+		align-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+	}
+
+	&__modal-content{
+		position: relative;
+		background-color: #fff;
+		width: 100%;
+		margin: auto;
+		border-radius: 1rem;
+		box-shadow: 9px 46px 8px rgba(0, 0, 0, 0.2);
+	}	
+	button[data-dismiss="modal"] {
+		margin: 0 0 20px 0;
+	}
+}
+
+
+
+.a-closeModal {
+	position: absolute;
+	top: 13px;
+	right: 10px;
+	color: $button-background;
+	background-color: $button-color;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	font-size: 30px;
+	line-height: 37px;
+	text-align: center;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	&:hover,
+	&:focus {
+		background-color: $button-background-hover;
+		color: $button-color;
+		cursor: pointer;
+	}
+}
+
+
+/*
+$color-video: #000;
+
+.m-modalVideo {
+  &:not(.active) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .video-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .video-container {
+    width: 100%;
+	position: relative;
+    padding-bottom: 56.25%;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0.9);
+  }
+
+  .close-video {
+    background-color: map-get($map: $colors, $key: 'brown');
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 150;
+	border: 0;
+	font-size: 0;
+    &:before,
+    &:after {
+      content: "";
+      width: 60%;
+      height: 3px;
+      background-color:  map-get($map: $colors, $key: 'white');
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+    }
+    &:before {
+      transform: rotate(42deg);
+    }
+    &:after {
+      transform: rotate(-42deg);
+    }
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+		border: 0;
+		background-color: map-get($map: $colors, $key: 'black');
+		&:before,
+		&:after {
+			background-color: #fff;
+		}
+    }
+  }
+
+  video,
+  iframe {
+    position: absolute;
+    z-index: 10;
+    box-shadow: 0 0 19px rgba(0, 0, 0, 0.16);
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    object-fit: cover;
+  }
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+    left: 0;
+    top: 0;
+	padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    background-color: rgba($color-video, 0.8);
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    z-index: 9991;
+    align-items: center;
+    justify-content: center;
+	height: 100vh;
+	@include breakpoint-md(){
+		padding-left: 5%;
+    	padding-right: 5%;
+	}
+	@include breakpoint-xs(){
+		padding-left: 2%;
+    	padding-right: 2%;
+	}
+    .video-container {
+      transform: scale(1);
+    }
+  }
+  
+   @media (max-width: 1659px) and (min-width: 1330px) {
+    .video-container {
+      //max-width: 978px;
+    }
+  }
+  @media (min-width: 1660px) {
+    .video-container {
+      //max-width: 1431px;
+    }
+  }
+}
+*/ 

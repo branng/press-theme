@@ -1,0 +1,6 @@
+/* a-bg */
+@each $name, $varColor in $bg-colors {
+	.u-bg-#{$name}{
+		background-color: $varColor;
+	}
+}

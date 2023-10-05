@@ -1,0 +1,124 @@
+/*	
+ * 	A front end Sass 
+ *  Author: Cómpani Estudio
+ */
+
+/*
+.bloque
+.bloque--modificador
+.bloque__elemento
+.bloque__elemento--modificador	
+*/
+
+@charset 'utf-8';
+
+
+/*  Settings
+    Global variables, config switches
+\*----------------------------------------------------------------------------*/
+@import "01_settings/variables";
+
+
+
+/*  Tools
+    Global mixins & functions
+\*----------------------------------------------------------------------------*/
+// @import '02_tools/';
+@import "02_tools/*";
+
+
+
+/*  Generic
+    Ground zero styles, normalize.css, resets
+\*----------------------------------------------------------------------------*/
+@import "03_generic/normalize";
+@import "03_generic/reset";
+
+
+
+/*  Objects
+	Patrones de diseño libre de estilos concretos.
+	Layuot, estructuras, loops
+	Prefixed with: o-
+\*----------------------------------------------------------------------------*/
+@import "04_objects/layout",
+        "04_objects/l-loopColors";
+
+
+
+/*  Atoms
+    These are basic tags, such as form labels, inputs or buttons. They also
+    include more abstract elements like color palettes, fonts, and icons.
+\*----------------------------------------------------------------------------*/
+@import "bootstrapGrid/bootstrap",
+        "05_atoms/scaffolding",
+        "05_atoms/ht",
+        //"05_atoms/grid",
+        //"05_atoms/buttons",
+        "05_atoms/buttons-pro",
+        "05_atoms/forms",
+        "05_atoms/tables",
+        "05_atoms/navigation",
+        "05_atoms/forms-cf7",
+        "05_atoms/a-MenuMobileclose",
+        "05_atoms/a-btnBrgr",
+        "05_atoms/a-xClose",
+        "05_atoms/a-arrowCircle";
+
+
+/*  Molecules
+    Molecules are groups of elements that function together as a unit
+\*----------------------------------------------------------------------------*/
+@import "06_molecules/m-breadcrumb",
+        "06_molecules/m-cardColor",
+        "06_molecules/m-navHeader",
+        "06_molecules/m-navHeaderMob",
+        "06_molecules/m-menuMobile",
+        "06_molecules/m-slideDemo",
+		"06_molecules/pagination";
+
+
+        
+
+
+/*  Organisms
+    Organisms are groups of molecules and atoms joined together to form
+    distinct sections of an interface.
+\*----------------------------------------------------------------------------*/
+
+//@import '07_organisms/';
+@import '07_organisms/o-modal',
+        '07_organisms/o-header',
+        '07_organisms/o-footer';
+        // '07_organisms/slick',
+        // '07_organisms/slick-theme';
+
+
+
+
+/*  Templates
+\*----------------------------------------------------------------------------*/
+// @import '08_templates/';
+
+
+
+/*  PAGES
+\*----------------------------------------------------------------------------*/
+//@import '09_pages/p-404';
+
+
+
+/*  Utilities
+    Helpers & overrides
+    Prefixed with: u-
+\*----------------------------------------------------------------------------*/
+@import '10_utilities/helpers',
+        "10_utilities/u-bgColors",
+        "10_utilities/u-color",
+        "10_utilities/u-margin",
+        "10_utilities/u-padding",
+        // "10_utilities/u-border-radius",
+        //"10_utilities/u-family",
+        // "10_utilities/u-g",
+        // "10_utilities/u-weight",
+        "10_utilities/u-bxImgRadius";
