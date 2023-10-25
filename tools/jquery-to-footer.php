@@ -10,11 +10,8 @@ function force_jquery_to_footer() {
     wp_enqueue_script( 'jquery' );
 }
 add_action( 'wp_enqueue_scripts', 'force_jquery_to_footer' );
- 
 // Remove jQuery from old wp_print_scripts
 //function remove_jquery_from_wp_print_scripts() {
 //    wp_deregister_script( 'jquery' );
 //}
 //add_action( 'wp_print_scripts', 'remove_jquery_from_wp_print_scripts' );
-
-

@@ -1,5 +1,4 @@
 <?php 
-	
 // Register HTML5 Blank Navigation
 function register_branng_menu()
 {

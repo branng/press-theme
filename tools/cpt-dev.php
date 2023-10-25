@@ -76,34 +76,3 @@ function set_posts_per_page_for_cpt_dev( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'set_posts_per_page_for_cpt_dev' );
-
-
-
-
-
-/*
-/////////////////
-/////////////////
-// https://www.proydsl.com/eliminar-el-slug-de-la-url-de-un-custom-post-type/
-/////////////////
-/////////////////
-
-add_action( 'pre_get_posts', 'cyb_include_custom_post_type_in_query' );
-function cyb_include_custom_post_type_in_query( $query ) {
-
-     // Si no es el query principal salir
-     if ( ! $query->is_main_query() ) {
-         return;
-     }
-
-     if ( 2 != count( $query->query ) || ! isset( $query->query['page'] ) ) {
-         return;
-     }
-
-      // Incluir custom post type en el query
-     if ( ! empty( $query->query['name'] ) ) {
-          $post_types = array( 'post', 'page', 'cpt_dev' );
-          $query->set( 'post_type', $post_types );
-     }
- }
- */

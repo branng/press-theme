@@ -51,6 +51,7 @@
     include more abstract elements like color palettes, fonts, and icons.
 \*----------------------------------------------------------------------------*/
 @import "bootstrapGrid/bootstrap",
+        "05_atoms/fonts",
         "05_atoms/scaffolding",
         "05_atoms/ht",
         //"05_atoms/grid",
@@ -74,7 +75,8 @@
         "06_molecules/m-navHeader",
         "06_molecules/m-navHeaderMob",
         "06_molecules/m-menuMobile",
-        "06_molecules/m-slideDemo",
+        "06_molecules/m-cardPost",
+        //"06_molecules/m-slideDemo",
 		"06_molecules/pagination";
 
 

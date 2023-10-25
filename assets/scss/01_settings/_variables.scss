@@ -79,6 +79,16 @@ $bg-colors: (
 	'color-superficie-white'				: $press-color-base-white
 );
 
+/*
+$fonts: (
+	1 : (
+        'namefile' : 'Fraunces-Italic-VariableFont_SOFT_WONK_opsz_wght',
+        'family' : 'Fraunces Italic Flex',
+        'weight' : 100 900,
+        // 'weight-name' : 'light'
+    )
+);
+*/ 
 
 /* forms cf7 */
 $b-Success: #00A04A;
@@ -117,13 +127,13 @@ $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
 $font-color: $press-color-base-text-principal;
-$font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+$font-family: Arial, sans-serif;
 $line-height: 1.6;
 
 // Headings
 $heading-font-color: $font-color;
 $heading-font-weight: 600;
-$heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+$heading-font-family: Arial, sans-serif;
 $heading-line-height: 1.2;
 
 // Mobile heading font size

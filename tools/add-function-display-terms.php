@@ -1,6 +1,4 @@
-
 <?php
-// Función para mostrar términos (tags o categorías)
 /**
  * 
  * EXAMPLES

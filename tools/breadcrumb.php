@@ -47,14 +47,14 @@ function breadcrumb() {
 		
 		
 		
-		if ( is_home() ) {
-			$position = 0;
-			echo $wrap_before;
-			echo $home_link;
-			$position += 1;
-			echo $home_link_blog;
-			echo $wrap_after;
-		}
+		// if ( is_home() ) {
+		// 	$position = 0;
+		// 	echo $wrap_before;
+		// 	echo $home_link;
+		// 	$position += 1;
+		// 	echo $home_link_blog;
+		// 	echo $wrap_after;
+		// }
 
 	} else {
 
@@ -72,7 +72,7 @@ function breadcrumb() {
 
 		if ( is_category() ) {
 			$position += 1;
-			echo $home_link_blog;
+			//echo $home_link_blog;
 			$parents = get_ancestors( get_query_var('cat'), 'category' );
 			foreach ( array_reverse( $parents ) as $cat ) {
 				$position += 1;
@@ -164,7 +164,7 @@ function breadcrumb() {
 				
 				
 			} else {
-				echo $home_link_blog;
+				// echo $home_link_blog;
 				$cat = get_the_category(); $catID = $cat[0]->cat_ID;
 				$parents = get_ancestors( $catID, 'category' );
 				$parents = array_reverse( $parents );

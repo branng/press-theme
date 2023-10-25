@@ -1,0 +1,12 @@
+// /*
+// // @each $key, $font in $fonts {
+// //   $namefile: map-get($font, 'namefile');
+// //   @font-face {
+// //       font-family: map-get($font, 'family');
+// //       src: url('../fonts/#{$namefile}.ttf') format('ttf');
+// //       font-weight: 100 1000;
+// //       // font-weight: map-get($font, 'weight');
+// //       // font-style: normal;
+// //   }
+// // }
+// */ 

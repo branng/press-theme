@@ -1,5 +1,6 @@
 <?php get_header(); ?>
-	<main role="main" class="container">
+<div class="total">
+	<main role="main" class="small-container">
 		<?php echo breadcrumb(); ?>
 		<section>
 			<h1><?php the_title(); ?></h1>
@@ -11,7 +12,7 @@
 
 				<?php the_content(); ?>
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
+				<?php // comments_template( '', true ); // Remove if you don't want comments ?>
 
 				<br class="clear">
 
@@ -37,12 +38,5 @@
 		</section>
 		<!-- /section -->
 	</main>
-
-	
-	<div class="content-section">
-		<div class="container">
-		<?php get_sidebar(); ?>
-		</div>
-	</div>
-
+</div>
 <?php get_footer(); ?>

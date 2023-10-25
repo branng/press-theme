@@ -1,6 +1,6 @@
 <?php
 /*
- *  Author: Todd Motto | @toddmotto
+ *  Author: branng 
  *  URL: branngwp.com | @branngwp
  *  Custom functions, support, custom post types and more.
  */
@@ -10,9 +10,6 @@
 \*------------------------------------*/
 include('tools/aa-tools.php');
 // Load any external files you have here
-
-
-
 // Admin footer modification
 function remove_footer_admin () {
     echo '<span id="footer-thankyou">Tema desarrollado por <a href="http://www.branng.com" target="_blank">branng</a></span>';
@@ -354,50 +351,6 @@ function enable_threaded_comments()
     }
 }
 
-// Custom Comments Callback
-function branngwpcomments($comment, $args, $depth)
-{
-	$GLOBALS['comment'] = $comment;
-	extract($args, EXTR_SKIP);
-
-	if ( 'div' == $args['style'] ) {
-		$tag = 'div';
-		$add_below = 'comment';
-	} else {
-		$tag = 'li';
-		$add_below = 'div-comment';
-	}
-?>
-    <!-- heads up: starting < for the html tag (li or div) in the next line: -->
-    <<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
-	<?php if ( 'div' != $args['style'] ) : ?>
-	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
-	<?php endif; ?>
-	<div class="comment-author vcard">
-	<?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['180'] ); ?>
-	<?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
-	</div>
-<?php if ($comment->comment_approved == '0') : ?>
-	<em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
-	<br />
-<?php endif; ?>
-
-	<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
-		<?php
-			printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','' );
-		?>
-	</div>
-
-	<?php comment_text() ?>
-
-	<div class="reply">
-	<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-	</div>
-	<?php if ( 'div' != $args['style'] ) : ?>
-	</div>
-	<?php endif; ?>
-<?php }
-
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
 \*------------------------------------*/
@@ -445,72 +398,4 @@ add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove 
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
 
 // Remove Filters
-remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
-
-// Shortcodes
-/*
-add_shortcode('html5_shortcode_demo', 'html5_shortcode_demo'); // You can place [html5_shortcode_demo] in Pages, Posts now.
-add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [html5_shortcode_demo_2] in Pages, Posts now.
-*/ 
-// Shortcodes above would be nested like this -
-// [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
-
-/*------------------------------------*\
-	Custom Post Types
-\*------------------------------------*/
-
-// // Create 1 Custom Post type for a Demo, called HTML5-Blank
-// function create_post_type_html5()
-// {
-//     register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
-//     register_taxonomy_for_object_type('post_tag', 'html5-blank');
-//     register_post_type('html5-blank', // Register Custom Post Type
-//         array(
-//         'labels' => array(
-//             'name' => __('HTML5 Blank Custom Post', 'branngwp'), // Rename these to suit
-//             'singular_name' => __('HTML5 Blank Custom Post', 'branngwp'),
-//             'add_new' => __('Add New', 'branngwp'),
-//             'add_new_item' => __('Add New HTML5 Blank Custom Post', 'branngwp'),
-//             'edit' => __('Edit', 'branngwp'),
-//             'edit_item' => __('Edit HTML5 Blank Custom Post', 'branngwp'),
-//             'new_item' => __('New HTML5 Blank Custom Post', 'branngwp'),
-//             'view' => __('View HTML5 Blank Custom Post', 'branngwp'),
-//             'view_item' => __('View HTML5 Blank Custom Post', 'branngwp'),
-//             'search_items' => __('Search HTML5 Blank Custom Post', 'branngwp'),
-//             'not_found' => __('No HTML5 Blank Custom Posts found', 'branngwp'),
-//             'not_found_in_trash' => __('No HTML5 Blank Custom Posts found in Trash', 'branngwp')
-//         ),
-//         'public' => true,
-//         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
-//         'has_archive' => true,
-//         'supports' => array(
-//             'title',
-//             'editor',
-//             'excerpt',
-//             'thumbnail'
-//         ), // Go to Dashboard Custom HTML5 Blank post for supports
-//         'can_export' => true, // Allows export in Tools > Export
-//         'taxonomies' => array(
-//             'post_tag',
-//             'category'
-//         ) // Add Category and Post Tags support
-//     ));
-// }
-
-/*------------------------------------*\
-	ShortCode Functions
-\*------------------------------------*/
-/*
-// Shortcode Demo with Nested Capability
-function html5_shortcode_demo($atts, $content = null)
-{
-    return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
-}
-
-// Shortcode Demo with simple <h2> tag
-function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
-{
-    return '<h2>' . $content . '</h2>';
-}
-*/ 
-?>
+remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogethe

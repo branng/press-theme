@@ -1,29 +1,29 @@
-<header class="o-header" role="banner">
-	<div class="o-header__lay container">
-		<div class="__bxCol">
-			<div class="a-logo">
-				<?php if(has_custom_logo('custom_logo')) : ?>
-				<a href="<?php echo home_url(); ?>">
-					<img src="<?php echo get_theme_mod('custom_logo'); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>">
-				</a>
-				<?php else : ?>
-				<a href="<?php echo home_url(); ?>"><h2><?php bloginfo('name'); ?></h2></a>
-				<?php endif; ?>
-				
+<header class="o-header u-bg-color-superficie-brand-black" role="banner">
+	<div class="container">
+		<div class="row d-flex justify-content-center o-header__logo">
+			<div class="col u-pT-xs">
+				<div class="a-logo mauto d-table">
+					<?php if(has_custom_logo('custom_logo')) : ?>
+					<a href="<?php echo home_url(); ?>">
+						<img src="<?php echo get_theme_mod('custom_logo'); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>">
+					</a>
+					<?php else : ?>
+					<a href="<?php echo home_url(); ?>"><h2><?php bloginfo('name'); ?></h2></a>
+					<?php endif; ?>
+				</div>
 			</div>
 		</div>
-		<div class="__bxCol">
-			<nav class="m-navHeader" role="navigation">
-
-
-						
+	</div>
+	<div class="total u-bg-color-superficie-principal">
+		<div class="container">
+			<nav class="m-navHeader u-type-color-base-text-principal" role="navigation">	
 				<?php 
 				if ( has_nav_menu( 'header-menu' ) ) {
 					echo menu_principal(1); 
 				}
-				
-				// echo menu_principal(1); ?>
+				?>
 			</nav>
+			<?php /*
 			<button class="a-btnBrgr" onClick="actionMenu()">
 				<svg xmlns="http://www.w3.org/2000/svg" width="37.261" height="14.5" viewBox="0 0 37.261 14.5">
 					<g transform="translate(-1802.739 -45.75)">
@@ -33,6 +33,8 @@
 					</g>
 				</svg>
 			</button>
+			*/ ?>
+		
 		</div>
 	</div>
 </header>

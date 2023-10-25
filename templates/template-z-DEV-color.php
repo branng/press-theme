@@ -102,15 +102,15 @@ Template Post Type: cpt_dev
 
 	$coloresType = array(	
 		'Buttons Colors' => array(
-			'var(--souds-button-color-white)',
-			'var(--souds-button-color-principal-500)',
-			'var(--souds-button-color-principal-700)',
-			'var(--souds-button-color-principal-300)',
-			'var(--souds-button-color-principal-100)',
-			'var(--souds-button-color-secondary-500)',
-			'var(--souds-button-color-secondary-700)',
-			'var(--souds-button-color-secondary-300)',
-			'var(--souds-button-color-secondary-100)'
+			'var(--press-button-color-white)',
+			'var(--press-button-color-principal-500)',
+			'var(--press-button-color-principal-700)',
+			'var(--press-button-color-principal-300)',
+			'var(--press-button-color-principal-100)',
+			'var(--press-button-color-secondary-500)',
+			'var(--press-button-color-secondary-700)',
+			'var(--press-button-color-secondary-300)',
+			'var(--press-button-color-secondary-100)'
 		)
 	);
 	?>

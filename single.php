@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<main role="main" class="container">
+	<main role="main" class="small-container">
 	<?php echo breadcrumb(); ?>
 	<section>
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -12,7 +12,9 @@
 			<h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
 			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
 			<span class="author"><?php _e( 'Published by', 'branngwp' ); ?> <?php the_author_posts_link(); ?></span>
+			<?php /*
 			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'branngwp' ), __( '1 Comment', 'branngwp' ), __( '% Comments', 'branngwp' )); ?></span>
+			*/ ?>			
 			<?php the_content(); // Dynamic Content ?>
 			
 			
@@ -114,7 +116,7 @@
 
 
 	<div class="content-section">
-		<div class="container">
+		<div class="small-container">
 			<h1>Posts relacionados</h1>
 			<?php
 			$related_query = new WP_Query(array(

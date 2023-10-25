@@ -1,17 +1,23 @@
 .m-navHeader{
+	@include media-breakpoint-down(lg){
+		display: none;
+	}
 	ul{
 		@extend %reset-list;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
 	}
 	li{
 		margin: 10px;
 	}
 	a{
+		@include ht-body-xs();
 		padding: 5px;
+		color: currentColor;
+		text-transform: uppercase;
 	}
-	@include media-breakpoint-down(lg){
-		display: none;
-	}
+
 }

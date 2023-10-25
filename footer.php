@@ -12,11 +12,10 @@
 			*/
 			
 			/* footer */ ?>
-			<footer class="o-footer u-pTB-m" role="contentinfo">
-				<div class="container">
-					<div class="o-footer__bxCol">
-						<div class="flex-large">
-
+			<footer class="o-footer u-pTB-m u-bg-color-superficie-principal-light" role="contentinfo">
+				<div class="container">					
+					<div class="row d-flex justify-content-center flex-column">
+						<div class="col text-center">
 							<?php if(has_custom_logo('custom_logo_footer')) : ?>
 							<a href="<?php echo home_url(); ?>">
 								<img src="<?php echo get_theme_mod('custom_logo_footer'); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>">
@@ -25,9 +24,12 @@
 							<a href="<?php echo home_url(); ?>"><h2><?php bloginfo('name'); ?></h2></a>
 							<?php endif; ?>
 							<p class="copyright"> &copy; <?php echo do_shortcode('[year]'); ?> Copyright <?php bloginfo('name'); ?>.</p>
-						</div>
-						<div class="o-footer__bxCol">
-							<button data-target="modalRGPD" data-toggle="js-modal" class="btn btn-default"> Open modal </button>
+							<?php
+							/*
+							<div class="o-footer__bxCol">
+								<button data-target="modalRGPD" data-toggle="js-modal" class="btn btn-default"> Open modal </button>
+							</div>
+							*/ ?>
 						</div>
 					</div>
 				</div>
@@ -45,6 +47,15 @@
 			end tt_footer_after_hook		
 			*
 			*/
+
+
+
+
+			/**
+			 * Extraemos el menu mobile
+			 */
+			get_template_part('/parts/menu', 'mobile');
+		
 			?>
 			
 	

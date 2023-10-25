@@ -93,6 +93,38 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/assets\/fonts\/Fraunces-Italic-VariableFont_SOFT_WONK_opsz_wght.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/Fraunces-Italic-VariableFont_SOFT_WONK_opsz_wght.ttf",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/Fraunces-VariableFont_SOFT_WONK_opsz_wght.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/Fraunces-VariableFont_SOFT_WONK_opsz_wght.ttf",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/OpenSans-Italic-VariableFont_wdth_wght.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/OpenSans-Italic-VariableFont_wdth_wght.ttf",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/OpenSans-VariableFont_wdth_wght.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/OpenSans-VariableFont_wdth_wght.ttf",
+      "oF" : 0
+    },
     "\/assets\/fonts\/slick.eot" : {
       "cB" : 0,
       "ft" : 8192,
@@ -501,6 +533,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/scss\/05_atoms\/_fonts.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/05_atoms\/_fonts.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/assets\/scss\/05_atoms\/_forms-cf7.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -646,6 +693,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/scss\/06_molecules\/_m-cardColor.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/scss\/06_molecules\/_m-cardPost.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/06_molecules\/_m-cardPost.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -2320,14 +2382,6 @@
       "oAP" : "\/category.php",
       "oF" : 0
     },
-    "\/comments.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/comments.php",
-      "oF" : 0
-    },
     "\/footer.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2416,6 +2470,14 @@
       "oAP" : "\/parts\/post-navigation.php",
       "oF" : 0
     },
+    "\/resultado.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/resultado.txt",
+      "oF" : 0
+    },
     "\/search.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2447,6 +2509,30 @@
       "oA" : 0,
       "oAP" : "\/single.php",
       "oF" : 0
+    },
+    "\/style-min.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/style-min-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/style.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/style-min.css",
+      "oF" : 0,
+      "pg" : 0
     },
     "\/tag.php" : {
       "cB" : 0,

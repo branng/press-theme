@@ -2,49 +2,191 @@
 Template Post Type: cpt_dev
 */ get_header(); ?>
 
-	<div class="container">
+<div class="container">
 		<div class="content-section">
 			<?php echo breadcrumb(); ?>
 		</div>
 	</div>
 	
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/prism.css?v=<?php echo hash_file('md5', get_template_directory_uri() . '/assets/css/main.css'); ?>" media="all" />
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/prism.js" id="jquery-core-js"></script>
 	
 	
 	<?php 
 	// Referencia de array multidimensional
 	// https'=>'//www.guidacode.com/2017/php/arrays-php-array-multidimensional/
 	
-	$texto_corto = 'Gracias por elegirnos';
+	$texto_corto = 'Press-theme type styles';
 	$texto_largo = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+
 	
+	function repeaterType(){}
+
+	$argsGeneralType = array(
+
+	);
 	
 	$type = array(
-		'ht-one' 			=> $texto_corto,
-		'ht-two-l' 			=> $texto_corto,
-		'ht-two' 			=> $texto_corto,
-		'ht-two-m' 			=> $texto_corto,
-		'ht-three' 			=> $texto_corto,
-		'ht-body-l' 		=> $texto_corto,
-		'ht-body' 			=> $texto_corto,
-		'ht-body-m' 		=> $texto_corto,
-		'ht-body-s' 		=> $texto_corto,
+		'ht-one 0' => array(
+			'color-bg' => 'u-bg-color-superficie-white',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_corto
+		),
+		'ht-one 1' => array(
+			'color-bg' => 'u-bg-color-superficie-brand',
+			'color-type' => 'u-type-color-base-text-white',
+			'var-texto' => $texto_corto
+		),
+		'ht-one 2' => array(
+			'color-bg' => 'u-bg-color-superficie-principal',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_corto
+		),
+		'ht-one 3' => array(
+			'color-bg' => 'u-bg-color-superficie-secondary',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_corto
+		),
+		'ht-one 4' => array(
+			'color-bg' => 'u-bg-color-superficie-white',
+			'color-type' => 'u-type-color-base-text-terciary',
+			'var-texto' => $texto_corto
+		),
+		'ht-two 0' => array(
+			'color-bg' => 'u-bg-color-superficie-white',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_corto
+		),
+		'ht-two 1' => array(
+			'color-bg' => 'u-bg-color-superficie-brand',
+			'color-type' => 'u-type-color-base-text-white',
+			'var-texto' => $texto_corto
+		),
+		'ht-two 2' => array(
+			'color-bg' => 'u-bg-color-superficie-principal',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_corto
+		),
+		'ht-two 3' => array(
+			'color-bg' => 'u-bg-color-superficie-secondary',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_corto
+		),
+		'ht-two 4' => array(
+			'color-bg' => 'u-bg-color-superficie-white',
+			'color-type' => 'u-type-color-base-text-terciary',
+			'var-texto' => $texto_corto
+		),
+		'ht-three 0' => array(
+			'color-bg' => 'u-bg-color-superficie-white',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_corto
+		),
+		'ht-three 1' => array(
+			'color-bg' => 'u-bg-color-superficie-brand',
+			'color-type' => 'u-type-color-base-text-white',
+			'var-texto' => $texto_corto
+		),
+		'ht-three 2' => array(
+			'color-bg' => 'u-bg-color-superficie-principal',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_corto
+		),
+		'ht-three 3' => array(
+			'color-bg' => 'u-bg-color-superficie-secondary',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_corto
+		),
+		'ht-three 4' => array(
+			'color-bg' => 'u-bg-color-superficie-white',
+			'color-type' => 'u-type-color-base-text-terciary',
+			'var-texto' => $texto_corto
+		),
+		'ht-body 0' => array(
+			'color-bg' => 'u-bg-color-superficie-white',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_largo
+		),
+		'ht-body 1' => array(
+			'color-bg' => 'u-bg-color-superficie-brand',
+			'color-type' => 'u-type-color-base-text-white',
+			'var-texto' => $texto_largo
+		),
+		'ht-body 2' => array(
+			'color-bg' => 'u-bg-color-superficie-principal',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_largo
+		),
+		'ht-body 3' => array(
+			'color-bg' => 'u-bg-color-superficie-secondary',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_largo
+		),
+		'ht-body 4' => array(
+			'color-bg' => 'u-bg-color-superficie-white',
+			'color-type' => 'u-type-color-base-text-terciary',
+			'var-texto' => $texto_largo
+		),
+		'ht-body-s 0' => array(
+			'color-bg' => 'u-bg-color-superficie-white',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_largo
+		),
+		'ht-body-s 1' => array(
+			'color-bg' => 'u-bg-color-superficie-brand',
+			'color-type' => 'u-type-color-base-text-white',
+			'var-texto' => $texto_largo
+		),
+		'ht-body-s 2' => array(
+			'color-bg' => 'u-bg-color-superficie-principal',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_largo
+		),
+		'ht-body-s 3' => array(
+			'color-bg' => 'u-bg-color-superficie-secondary',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_largo
+		),
+		'ht-body-s 4' => array(
+			'color-bg' => 'u-bg-color-superficie-white',
+			'color-type' => 'u-type-color-base-text-terciary',
+			'var-texto' => $texto_largo
+		),
+		'ht-body-xs 0' => array(
+			'color-bg' => 'u-bg-color-superficie-white',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_largo
+		),
+		'ht-body-xs 1' => array(
+			'color-bg' => 'u-bg-color-superficie-brand',
+			'color-type' => 'u-type-color-base-text-white',
+			'var-texto' => $texto_largo
+		),
+		'ht-body-xs 2' => array(
+			'color-bg' => 'u-bg-color-superficie-principal',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_largo
+		),
+		'ht-body-xs 3' => array(
+			'color-bg' => 'u-bg-color-superficie-secondary',
+			'color-type' => 'u-type-color-base-text-principal',
+			'var-texto' => $texto_largo
+		),
+		'ht-body-xs 4' => array(
+			'color-bg' => 'u-bg-color-superficie-white',
+			'color-type' => 'u-type-color-base-text-terciary',
+			'var-texto' => $texto_largo
+		),
 	);
-	?>
-	<div class="container">
-	<?php foreach($type as $claseType => $textoType){ ?>
-		<p class="<?php echo $claseType; ?>"><?php echo $textoType; ?></p>
-		<p class="<?php echo $claseType; ?> a-amarillo"><?php echo $textoType; ?></p>
-		<p class="<?php echo $claseType; ?> a-gris"><?php echo $textoType; ?></p>
-		<p class="<?php echo $claseType; ?> a-slab"><?php echo $textoType; ?></p>
-		<p class="<?php echo $claseType; ?> a-slab a-amarillo"><?php echo $textoType; ?></p>
-		<p class="<?php echo $claseType; ?> a-slab a-gris"><?php echo $textoType; ?></p>
-		<pre><code class="language-css">.<?php echo $claseType; ?> or  @include <?php echo $claseType; ?>();</code></pre>
-		<br>
-		<br>
-	<?php } ?>
+	
+	foreach($type as $typeNameClass => $typeArgs) : ?>
+	<div class="total <?php echo $typeArgs["color-type"] . ' ' . $typeArgs["color-bg"]; ?> u-pTB-l">
+		<div class="container">
+			<p class="<?php echo $typeNameClass; ?>"><?php echo $typeArgs["var-texto"]; ?></p>
+			<p class="<?php echo $typeNameClass; ?> u-medium"><?php echo $typeArgs["var-texto"]; ?></p>
+			<p class="ht-body-xs"><?php echo '.' . $typeNameClass . " ." . $typeArgs["color-type"]; ?></p>
+			<!--pre><code class="language-css">.<?php echo $typeNameClass; ?> or  @include <?php echo $typeNameClass; ?>();</code></pre-->
+		</div>
 	</div>
+	<?php endforeach; ?>
 	
 	
 	

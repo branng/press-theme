@@ -18,19 +18,24 @@
 		justify-content: center;
 		align-items: center;
 		align-content: center;
+		border-radius: 100px;
 		//border: 1px solid rgba($secondary-color, 0.2);
 		margin: 4px;
 		background-color: white;
+		color: $press-color-base-text-principal;
+		a{
+			color: currentColor;
+		}
 		&:hover{
-			background-color: $primary-color;
-			color: white;
+			background-color: $press-color-superficie-brand ;
+			color: $press-color-base-text-white;
 			//border-color: $primary-color;
 			text-decoration: none;
 		}
 		&.current{
-			background-color: $primary-color;
-			color: white;
-			border-color: $primary-color;
+			background-color: $press-color-superficie-brand;
+			color: $press-color-base-text-white;
+			border-color: $press-color-superficie-brand;
 		}
 		&.prev,
 		&.next{
